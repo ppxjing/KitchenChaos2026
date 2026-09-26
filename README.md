@@ -17,9 +17,28 @@ A Unity recreation project developed while following the Kitchen Chaos tutorial.
 
 ### Evidence
 
-- Tutorial progress screenshot: **Add screenshot here**
 - [Game View recording](https://youtu.be/tsoGaSb0wOM)
 - [GitHub commit](https://github.com/ppxjing/KitchenChaos2026/commit/0a91cb86240767284a61b725003c0485061a11eb)
+
+#### Tutorial progress — Episode 13
+
+![Tutorial progress at Episode 13](Evidence/tutorial-progress-p13.png)
+
+#### Game View and Animator
+
+![Player movement and Animator setup in Unity](Evidence/game-view-and-animator.png)
+
+#### Player movement code
+
+![Player movement code](Evidence/player-code.png)
+
+#### Player animation code
+
+![Player animation code](Evidence/player-animator-code.png)
+
+#### New Input System code
+
+![Game input code](Evidence/game-input-code.png)
 
 ### What I learned
 
