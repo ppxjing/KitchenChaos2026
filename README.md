@@ -22,23 +22,23 @@ A Unity recreation project developed while following the Kitchen Chaos tutorial.
 
 #### Tutorial progress — Episode 13
 
-![Tutorial progress at Episode 13](Evidence/tutorial-progress-p13.png)
+![Tutorial progress at Episode 13](Evidence/Milestone-1/tutorial-progress-p13.png)
 
 #### Game View and Animator
 
-![Player movement and Animator setup in Unity](Evidence/game-view-and-animator.png)
+![Player movement and Animator setup in Unity](Evidence/Milestone-1/game-view-and-animator.png)
 
 #### Player movement code
 
-![Player movement code](Evidence/player-code.png)
+![Player movement code](Evidence/Milestone-1/player-code.png)
 
 #### Player animation code
 
-![Player animation code](Evidence/player-animator-code.png)
+![Player animation code](Evidence/Milestone-1/player-animator-code.png)
 
 #### New Input System code
 
-![Game input code](Evidence/game-input-code.png)
+![Game input code](Evidence/Milestone-1/game-input-code.png)
 
 ### What I learned
 
