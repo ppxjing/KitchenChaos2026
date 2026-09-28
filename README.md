@@ -128,3 +128,49 @@ The recipe UI uses a hidden template. It creates a copy for each order, then cre
 The DeliveryCounter passes the player's plate to the DeliveryManager. The manager compares the ingredients on the plate with each waiting recipe. A matching plate removes the order and sends success events; an incorrect plate sends a failure event.
 
 Game states control when systems are allowed to run. The player presses `E` to begin the countdown, the playing state starts order generation and the timer, and the game-over state shows the final score.
+
+## Milestone 4
+
+**Tutorial progress:** Lessons 76–106  
+**Gameplay video:** [Watch on YouTube](https://youtu.be/BSshn0vOY4w)
+
+### Work Completed
+
+- Added a tutorial overlay that explains keyboard and gamepad controls before the round begins.
+- Added pause, resume, return-to-main-menu, and settings screens.
+- Added music and sound-effect volume controls that save the chosen value.
+- Added keyboard and gamepad key rebinding, including an on-screen prompt while selecting a new key.
+- Updated the tutorial and settings screens after a control binding changes.
+- Added a reset manager so static counter events reset correctly when a scene loads.
+- Added player footstep sound playback while the player walks.
+- Added the countdown, game clock, stove warning feedback, delivery feedback, and final game-over result screen.
+- Fixed the countdown display so it renders `3`, `2`, and `1` correctly.
+
+### How to Test
+
+1. Run the project and choose **PLAY**.
+2. Read the tutorial overlay, then press `E` to start the countdown.
+3. Press `Esc` to open the pause screen. Test **Resume**, **Options**, and **Main Menu**.
+4. In **Options**, click the music or sound-effect rows to change volume. Click a key row, then press a new key to rebind it.
+5. Start a round and check the timer, orders, delivery success or failure feedback, and the game-over score.
+6. Leave food on the stove long enough to view the cooking and burning warning feedback.
+
+### Evidence
+
+![Unity Scripts folder for the final milestone](Evidence/Milestone-4/01-unity-scripts-folder.png)
+
+![Player footstep sound logic](Evidence/Milestone-4/02-player-footstep-sounds.png)
+
+![Static event reset logic](Evidence/Milestone-4/03-reset-static-data.png)
+
+### What I Learned
+
+A pause menu changes `Time.timeScale` to stop game time. The menu can then show Resume, Options, and Main Menu actions without stopping the Unity application itself.
+
+PlayerPrefs saves simple values such as music volume, sound-effect volume, and custom key bindings. The values are loaded again when the project starts.
+
+Key rebinding updates the input action instead of changing gameplay code. UI text reads the current binding from GameInput, so the tutorial and settings menu can display the new key automatically.
+
+Static events can keep old listeners after a scene change. ResetStaticDataManager clears those static event lists when a scene loads, preventing duplicate reactions in the next game.
+
+PlayerSounds checks whether the player is walking and uses a short timer to play footsteps at intervals instead of every frame.
