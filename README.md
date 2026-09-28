@@ -85,3 +85,46 @@ CounterTopPoint marks where a kitchen object should be placed. After an object b
 KitchenObjectHolder manages shared kitchen-object placement and transfer behavior. Specific counters inherit that shared behavior and implement their own interaction rules, reducing duplicated code.
 
 ContainerCounter can act as a parent for visual child objects. Moving, rotating, or scaling the parent also changes its children, which keeps related counter objects organized.
+
+## Milestone 3
+
+**Tutorial progress:** Lessons 52–75  
+**Gameplay video:** [Watch on YouTube](https://youtu.be/fGUQYDOfGK8)
+
+### Work Completed
+
+- Added a Main Menu with Play and Quit buttons, plus a loading-scene transition into the kitchen.
+- Added a game-state flow: waiting to start, countdown, active gameplay, and game over.
+- Added automatic recipe orders, with up to four waiting recipes at one time.
+- Built the recipe-list UI from reusable templates so each order displays its name and ingredient icons.
+- Added a Delivery Counter that checks a plate against the waiting recipes.
+- Added success and failure events when food is delivered.
+- Connected background music and gameplay sound effects to the game managers and interaction events.
+
+### How to Play
+
+Run the project and select **PLAY** from the Main Menu. Press `E` once in the kitchen to start the three-second countdown. After the game begins, orders appear in the upper-left corner. Prepare the listed ingredients on a plate, face the Delivery Counter, and press `E` to submit the plate.
+
+### Evidence
+
+![Main Menu with Play and Quit](Evidence/Milestone-3/01-main-menu-play.png)
+
+![Main Menu and counter scripts](Evidence/Milestone-3/02-main-menu-counter-scripts.png)
+
+![Recipe UI populates a name and ingredient icons](Evidence/Milestone-3/03-delivery-manager-single-ui.png)
+
+![Delivery Manager creates waiting recipes](Evidence/Milestone-3/04-delivery-manager-recipe-spawn.png)
+
+![Delivery Manager compares a plate with a recipe](Evidence/Milestone-3/05-delivery-manager-recipe-validation.png)
+
+![Successful delivery sends completion and success events](Evidence/Milestone-3/06-delivery-success-event.png)
+
+### What I Learned
+
+Recipe data is stored in ScriptableObjects. The DeliveryManager chooses a recipe from the recipe list, stores it in a waiting list, and tells the UI to refresh through an event.
+
+The recipe UI uses a hidden template. It creates a copy for each order, then creates ingredient-icon copies inside that order. This lets one UI design display recipes with different ingredient counts.
+
+The DeliveryCounter passes the player's plate to the DeliveryManager. The manager compares the ingredients on the plate with each waiting recipe. A matching plate removes the order and sends success events; an incorrect plate sends a failure event.
+
+Game states control when systems are allowed to run. The player presses `E` to begin the countdown, the playing state starts order generation and the timer, and the game-over state shows the final score.
