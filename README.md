@@ -5,7 +5,7 @@ A Unity recreation project developed while following the Kitchen Chaos tutorial.
 ## Milestone 1
 
 **Tutorial progress:** Episode 13, approximately 2.5 hours  
-**Completion date:** 27 September 2026
+**Completion date:** 13 September 2026
 
 ### Work Completed
 
@@ -16,6 +16,8 @@ A Unity recreation project developed while following the Kitchen Chaos tutorial.
 - Moved Rigidbody calculations into `FixedUpdate` to follow fixed physics timing.
 
 ### Evidence
+
+![Tutorial progress](Evidence/Milestone-1/tutorial-progress.png)
 
 - [Game View recording](https://youtu.be/tsoGaSb0wOM)
 - [GitHub commit](https://github.com/ppxjing/KitchenChaos2026/commit/0a91cb86240767284a61b725003c0485061a11eb)
@@ -39,6 +41,7 @@ Separating player movement from visual animation prevents both systems from chan
 ## Milestone 2
 
 **Tutorial progress:** Lessons 14–51  
+**Completion date:** 19 September 2026
 **Gameplay video:** [Watch on YouTube](https://youtu.be/KzAi7k8tuk8)
 
 ### Work Completed
@@ -63,6 +66,8 @@ Separating player movement from visual animation prevents both systems from chan
 Move close to a counter and face it. The counter is highlighted when selected. After pressing `E` to start, wait for the short countdown before interacting. Container counters only give an ingredient when the player is not already holding one.
 
 ### Evidence
+
+![Tutorial progress](Evidence/Milestone-2/tutorial-progress.png)
 
 ![Unity project folders and scripts](Evidence/Milestone-2/01-unity-project-scripts.png)
 
@@ -89,6 +94,7 @@ ContainerCounter can act as a parent for visual child objects. Moving, rotating,
 ## Milestone 3
 
 **Tutorial progress:** Lessons 52–75  
+**Completion date:** 23 September 2026
 **Gameplay video:** [Watch on YouTube](https://youtu.be/fGUQYDOfGK8)
 
 ### Work Completed
@@ -106,6 +112,8 @@ ContainerCounter can act as a parent for visual child objects. Moving, rotating,
 Run the project and select **PLAY** from the Main Menu. Press `E` once in the kitchen to start the three-second countdown. After the game begins, orders appear in the upper-left corner. Prepare the listed ingredients on a plate, face the Delivery Counter, and press `E` to submit the plate.
 
 ### Evidence
+
+![Tutorial progress](Evidence/Milestone-3/tutorial-progress.png)
 
 ![Main Menu with Play and Quit](Evidence/Milestone-3/01-main-menu-play.png)
 
@@ -132,6 +140,7 @@ Game states control when systems are allowed to run. The player presses `E` to b
 ## Milestone 4
 
 **Tutorial progress:** Lessons 76–106  
+**Completion date:** 27 September 2026
 **Gameplay video:** [Watch on YouTube](https://youtu.be/BSshn0vOY4w)
 
 ### Work Completed
@@ -157,6 +166,8 @@ Game states control when systems are allowed to run. The player presses `E` to b
 
 ### Evidence
 
+![Tutorial progress](Evidence/Milestone-4/tutorial-progress.png)
+
 ![Unity Scripts folder for the final milestone](Evidence/Milestone-4/01-unity-scripts-folder.png)
 
 ![Player footstep sound logic](Evidence/Milestone-4/02-player-footstep-sounds.png)
@@ -174,3 +185,13 @@ Key rebinding updates the input action instead of changing gameplay code. UI tex
 Static events can keep old listeners after a scene change. ResetStaticDataManager clears those static event lists when a scene loads, preventing duplicate reactions in the next game.
 
 PlayerSounds checks whether the player is walking and uses a short timer to play footsteps at intervals instead of every frame.
+
+## Final Game
+
+Play the WebGL game on Itch.io:
+
+[KitchenChaos2026](https://ppxjsnd.itch.io/kitchenchaos2026)
+
+
+
+
